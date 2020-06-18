@@ -5,21 +5,22 @@
     <meta charset="utf-8" />
     <title>Albert Bregonia - Home</title>
 </head>
-<body class="b" style="color:ghostwhite; background-color:#0D0D0D;">
+<body style="color:ghostwhite; background-color:#0D0D0D;">
     <div>
-        <!-- This is the section for the main top bar for naviation -->
-        <h1 class="main" title="My Name">Albert Bregonia</h1>
-        <hr />
+        
 
         <!-- Navigation Bar -->
-        <ul class="nav">
-            <li><a title="Home Page" href="index.html">Home</a></li>
-            <li><a title="About Me in terms of Electrical Engineering" href="ese.html">Electrical Engineering</a></li>
-            <li><a title="About Me in terms of Computer Science" href="cse.html">Computer Science</a></li>
-            <li><a title="About Me in terms of Music Production" href="music.html">Music Production</a></li>
-            <li><a title="About Me in terms of Media Experience" href="media.html">Media Experience</a></li>
-        </ul>
-
+        <header class="topnav">
+            <!-- This is the section for the main top bar for naviation -->
+            <h1 class="main" title="My Name" style="padding-top:1%;">A L B E R T &ensp; B R E G O N I A</h1>
+            <ul class="nav">
+                <li><a title="Home Page" href="index.html">HOME</a></li>
+                <li><a title="About Me in terms of Electrical Engineering" href="ese.html">ELECTRICAL ENGINEERING</a></li>
+                <li><a title="About Me in terms of Computer Science" href="cse.html">COMPUTER SCIENCE</a></li>
+                <li><a title="About Me in terms of Music Production" href="music.html">MUSIC PRODUCTION</a></li>
+                <li><a title="About Me in terms of Media Experience" href="media.html">MEDIA EXPERIENCE</a></li>
+            </ul>
+        </header>
         <!-- Basic About Me -->
         <h2>About Me:</h2>
         <p title="Basic information about me" style="color:ghostwhite">
@@ -34,11 +35,11 @@
 
         <!-- Unordered List is Bullet Points//Ordered List is Numbered -->
         <!-- Bold <strong>
-        Itallic: <em>
-        Underline: <u>
-        Highlight: <mark>
-        Subscript: <sub>
-        SuperScript <sup> -->
+    Itallic: <em>
+    Underline: <u>
+    Highlight: <mark>
+    Subscript: <sub>
+    SuperScript <sup> -->
     </div>
 
 
@@ -49,9 +50,36 @@
         .main 
         {
             font-size: 40px;
-            margin: 0px;
+            margin: 1%;
             text-align: center;
-            font-family: Arial;
+            font-family: Nexa;
+        }
+        .topnav 
+        {
+            text-align: center;
+            font-family: Nexa Light;
+            margin: 0px,auto;
+            background:#1A1A1A
+        }
+        .topnav::after 
+        {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .nav ul 
+        {
+            padding-left: 30%;
+            list-style: none;
+        }
+
+        .nav li 
+        {
+            display: inline-block;
+            margin-left: 70px;
+            padding-top: 10px;
+            position: relative;
         }
     </style>
 </body>
