@@ -23,14 +23,16 @@
             text-align:center;
             color:ghostwhite; 
             background-color:#0D0D0D;
+            background-image: url('media/vs.png');
         }
         /*Nav Bar*/
         header
         {
             text-align: center;
             font-family: NexaL;
-            margin: 2px,auto;
-            background:#1A1A1A
+            margin: 0px;
+            width: 100%;
+            background:#1A1A1A;
         }
         header::after 
         {
@@ -72,4 +74,13 @@
             width: 100%;
         }
         /*Text*/
+        .nx
+        {
+            color: ghostwhite;
+            transition: ease-in-out
+        }
+        .nx:hover
+        {
+            color:darkred;
+        }
 </style>
