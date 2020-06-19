@@ -2,10 +2,16 @@
         /*My name*/
         .main 
         {
+            margin: 0%;
+        }
+        .mx
+        {
+            color:ghostwhite;
+            text-decoration: none;
+            text-transform: uppercase;
             font-family: NexaB;
             font-size: 40px;
             font-weight: 800;
-            margin: 1%;
             text-align: center;
         }
         /*Body Info*/
@@ -19,14 +25,14 @@
             background-color:#0D0D0D;
         }
         /*Nav Bar*/
-        .topnav 
+        header
         {
             text-align: center;
             font-family: NexaL;
-            margin: 0px,auto;
+            margin: 2px,auto;
             background:#1A1A1A
         }
-        .topnav::after 
+        header::after 
         {
             content: '';
             display: table;
@@ -38,12 +44,11 @@
             padding-left: 30%;
             list-style: none;
         }
-
         .nav li 
         {
             display: inline-block;
-            margin-left: 70px;
-            padding-top: 10px;
+            margin-left: 2%;
+            padding-top: 2%;
             position: relative;
         }
         .nav a
@@ -51,6 +56,20 @@
             color:ghostwhite;
             text-decoration: none;
             text-transform: uppercase;
+            transition: all ease-in-out 300ms;
+        }
+        .nav a::after /* Nav Bar Underline animation*/
+        {
+            content:'';
+            display: block;
+            height: 2px;
+            width: 0%;
+            background-color: ghostwhite;
+            transition: all ease-in-out 250ms;
+        }
+        .nav a:hover::after
+        {
+            width: 100%;
         }
         /*Text*/
 </style>
