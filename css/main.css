@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Bold";
+    src: url("https://albertbregonia.us.to/font/Gravity-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "Thin";
+    src: url("https://albertbregonia.us.to/font/Gravity-UltraLight.otf") format("opentype");
+}
+@font-face {
+    font-family: "Italics";
+    src: url("https://albertbregonia.us.to/font/Gravity-UltraLightItalic.otf") format("opentype");
+}
+
+.title{
+    font-family: Bold;
+    font-size: 30px;
+}
+.mind{
+    font-family: Bold;
+    font-size: 50px;
+    color:ghostwhite;
+    text-decoration: none;
+}
+
+.quote{
+    font-family: Italics;
+    font-size: large;
+}
+
+body{
+    font-family: Thin;
+    font-size:x-large;
+
+    color:ghostwhite;
+    background-color: #141414;
+    
+    margin-top: 5%;
+    text-align: center;
+    align-content:center;
+    margin-left: 0%;
+}
+
+#logo{transition: all ease-in-out 500ms;}
+
+#logo:hover{transform: scale(1.5) rotateZ(720deg);}
+
+/*Dive Button*/
+.dive{
+    font-family: Bold;
+    color:ghostwhite;
+    background-color: #2d2d2d;
+    border:#2d2d2d;
+
+    border-radius: 2%;
+    border-style:none;
+    box-shadow: black;
+    padding: 10px 16px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+}
+
+.dive::after{
+    content:'';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: ghostwhite;
+    transition: all ease-in-out 250ms;
+}
+
+.dive:hover::after{width: 100%;}
+
+/*Nav Bar*/
+#hud{
+    display:none;
+    background-color: #f3f3f3;
+
+    margin-top:3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: fit-content;
+
+    animation-name: hud;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+/*Nav Bar Animation*/
+@keyframes hud{
+    0%{height: 2px; opacity: 0;}
+    25%{height: 2px; opacity: 1;}
+    75%{height: 2px;}
+    90%{height: 64px;}
+    100%{height: fit-content; background-color: #0d0d0d; box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);}
+}
+
+#hud .btn img{
+    animation-name: icons;
+    animation-duration: 1s;
+}
+
+/*Nav Bar Stretch Animation
+I understand this is verbose but the animation is much smoother this way*/
+@keyframes icons{
+    0% {height: 0px; width: 0px;}
+    12.5%{height: 0px; width: 8;}
+    25%{height: 0px; width: 16;}
+    37.5%{height: 0px; width: 32;}
+    50%{height: 0px; width: 64;}
+    62.5%{height: 0px; width: 64;}
+    75%{height: 0px; width: 64;}
+    87.5%{height: 0px; width: 64;}
+    100%{height: 0px; width: 64;}
+}
+
+/*Buttons*/
+.btn{
+    display: none;
+    opacity: 0.4;
+    margin-right: 45px;
+    height: 0px;
+    position: relative;
+    transition: ease-in-out 150ms;
+    animation-name: iconsFade;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+}
+
+/*Icon Fade in Animation*/
+@keyframes iconsFade{
+    0%{opacity: 0;}
+    75%{opacity: 0;}
+    100%{opacity: 0.4;}
+}
+
+/*Button Highlight*/
+.btn:hover{
+    opacity: 1;
+    transform: scale(1.1) rotateY(360deg);
+    box-shadow: 0 0 3px 2px rgba(255,0,0,0.75);
+    transition: all ease-in-out 400ms;
+}
