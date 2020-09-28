@@ -11,73 +11,62 @@
     src: url("https://albertbregonia.us.to/font/Gravity-UltraLightItalic.otf") format("opentype");
 }
 
+#logo{transition: all ease-in-out 500ms;}
+#logo:hover{transform: scale(1.25) rotateZ(720deg);}
+
 .title{
     font-family: Bold;
-    font-size: 30px;
-}
-.mind{
-    font-family: Bold;
-    font-size: 50px;
-    color:ghostwhite;
-    text-decoration: none;
+    text-align: center; 
+    display: inline-block;
+    margin-top: 50px;
+    vertical-align: top;
 }
 
 .quote{
     font-family: Italics;
-    font-size: 23px;
+    font-size: large;
 }
 
 body{
+    margin-left: 2%;
     font-family: Thin;
     font-size:x-large;
 
     color:ghostwhite;
     background-color: #141414;
-    
-    margin-top: 5%;
-    text-align: center;
-    align-content:center;
-    margin-left: 0%;
+
+    text-align: left;
 }
 
-#logo{transition: all ease-in-out 500ms;}
+.sidebar{
+    content: '';
+    display: inline-block;
 
-#logo:hover{transform: scale(1.5) rotateZ(720deg);}
+    position: absolute;
+    margin-top: 20px;
+    margin-right: 1%;
+    vertical-align: top;
+    width: 3px;
 
-/*Dive Button*/
-.dive{
-    font-family: Bold;
-    color:ghostwhite;
-    background-color: #2d2d2d;
-    border:#2d2d2d;
-
-    border-radius: 2%;
-    border-style:none;
-    box-shadow: black;
-    padding: 10px 16px;
-    box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
-}
-
-.dive::after{
-    content:'';
-    display: block;
-    height: 2px;
-    width: 0%;
     background-color: ghostwhite;
-    transition: all ease-in-out 250ms;
+    color: #141414
 }
 
-.dive:hover::after{width: 100%;}
+.content{
+    display: inline-block; 
+    position:relative; 
+    margin-left: 20px;
+    margin-bottom: 15%;
+}
 
 /*Nav Bar*/
 #hud{
     display:none;
     background-color: #f3f3f3;
+    width: fit-content;
 
-    margin-top:3%;
     padding-left: 1%;
     padding-right: 1%;
-    width: fit-content;
 
     animation-name: hud;
     animation-duration: 1s;
