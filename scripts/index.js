@@ -4,13 +4,13 @@ function dive(){
         e.style.display = 'inline-block';
     });
 }
-function enter(){
+function enter(s){
     document.getElementById('body').style.marginBottom = '200%';
     window.scroll({
         top: 4096,
         behavior: 'smooth'
     });
     setTimeout(()=>{
-        window.open("/pages/about.html","_self");
+        window.open("/pages/"+s,"_self");
     },1000);
 }
