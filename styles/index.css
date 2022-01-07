@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Bold";
+    src: url("../font/Gravity-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "Regular";
+    src: url("../font/Gravity-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Thin";
+    src: url("../font/Gravity-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: "Italics";
+    src: url("../font/Gravity-LightItalic.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+:root {
+    --accent: #0e0f17;
+    --shadow: black;
+    --accentt: rgba(11, 12, 17, 0.82);
+    --highlight: #d27af0;
+    --highlight2: #267dff;
+    --fg: ghostwhite;
+    --fg0: gray;
+    --bg: #141520;
+    --icon-size: 20px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: Thin;
+    font-size: x-large;
+    color: var(--fg);
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    position: relative;
+    background-color: var(--accent);
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.7);
+    border-radius: 0 0 30px 30px;
+}
+
+header, #brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#brand {
+    margin: 0 30px;
+}
+
+#brand * {
+    padding: 10px;
+}
+
+h1 {
+    font-size: medium;
+}
+
+#clock {
+    height: min-content;
+    width: min-content;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    font-size: smaller;
+}
+
+#logo:hover {
+    transform: rotateZ(360deg);
+    fill: var(--highlight);
+}
+
+.icon {
+    height: var(--icon-size);
+    width: var(--icon-size);
+    fill: var(--fg);
+    transition: all ease-in-out 350ms 100ms;
+}
+
+#contact {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    border-radius: 100vh;
+    margin: 8px 30px;
+    background-color: var(--bg);
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+    transition: all ease-in-out 250ms;
+}
+
+#contact li {
+    margin: 0 10px;
+}
+
+#contact li svg:hover {
+    transform: rotateY(360deg) scale(1.1);
+    fill: var(--highlight);
+}

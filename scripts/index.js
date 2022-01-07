@@ -1,16 +1,27 @@
-function dive(){
-    document.getElementById('hud').style.display = 'inline-block';
-    Array.from(document.getElementsByClassName('btn')).forEach(e => {
-        e.style.display = 'inline-block';
-    });
-}
-function enter(s){
-    document.getElementById('body').style.marginBottom = '200%';
-    window.scroll({
-        top: 4096,
-        behavior: 'smooth'
-    });
-    setTimeout(()=>{
-        window.open("/pages/"+s,"_self");
-    },1000);
+const clock = document.getElementById(`clock`);
+
+((startup) => {
+    clockHandler();
+})();
+
+function clockHandler() {
+    const defaultTimeFormat = {
+        weekday: `long`, 
+        year: `numeric`, 
+        month: `long`, 
+        day: `numeric`,
+        hour: `numeric`,
+        minute: `2-digit`,
+        second: `2-digit`,
+        timeZoneName: `short`
+    };
+    setInterval(() => {
+        const now = new Date().toLocaleString(`en-US`, defaultTimeFormat),
+        first = now.indexOf(`,`), last = now.lastIndexOf(`,`),
+        day = now.substring(0, first),
+        date = now.substring(first + 1, last),
+        time = now.substring(last + 1);
+        clock.innerHTML = time; //this is HTML so the white space doesn't matter
+        clock.title = `${day}, ${date}`;
+    }, 1000);
 }
