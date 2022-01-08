@@ -1,8 +1,24 @@
-const clock = document.getElementById(`clock`);
+const myName = document.getElementById(`name`),
+      clock = document.getElementById(`clock`);
 
 ((startup) => {
+    myName.innerHTML = spaceOut(myName.textContent);
     clockHandler();
 })();
+
+function spaceOut(text) {
+    const chars = text.split(``);
+    for(let i=0; i<chars.length; i++) {
+        if(i%2) {
+            if(chars[i] == ` `)
+                chars.splice(i, 1, `&emsp;`);
+            else
+                chars.splice(i, 0, `&ensp;`);
+        }
+    }
+    console.log(chars);
+    return chars.join(``);
+}
 
 function clockHandler() {
     const defaultTimeFormat = {
